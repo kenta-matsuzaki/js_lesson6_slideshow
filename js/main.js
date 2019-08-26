@@ -13,7 +13,11 @@
 
   let currentNum = 0;
 
-  document.querySelector('main img').src = images[currentNum];
+  function setMainImage(image) {
+    document.querySelector('main img').src = image;
+  }
+
+  setMainImage(images[currentNum]);
 
   const thumbnails = document.querySelector('.thumbnails');
   images.forEach((image, index) => {
@@ -21,6 +25,11 @@
     if (index === currentNum){
       li.classList.add('current');
     }
+
+    li.addEventListener('click', () => {
+      setMainImage(image);
+    });
+
     const img = document.createElement('img');
     img.src = image;
     li.appendChild(img);
