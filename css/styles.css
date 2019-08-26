@@ -10,7 +10,7 @@ ul {
 }
 
 main {
-  background: pink;
+  margin-bottom: 8px;
 }
 
 main img {
@@ -19,12 +19,35 @@ main img {
   vertical-align: bottom;
 }
 
+nav {
+  margin-bottom: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav li {
   width: 60px;
   border: 1px solid #dedede;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav li:hover {
+  background: #f8f8f8;
 }
 
 .thumnails img {
   width: 56px;
   vertical-align: bottom;
+}
+
+#play {
+  width: 140px;
 }
