@@ -71,8 +71,10 @@
     setMainImage(images[currentNum]);
   });
 
+  let timeoutId;
+
   function playSlideshow() {
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
       next.click();
       playSlideshow();
     }, 1000);
@@ -86,4 +88,11 @@
     pause.classList.remove('hidden');
     playSlideshow();
   });
+
+  pause.addEventListener('click', () => {
+    play.classList.remove('hidden');
+    pause.classList.add('hidden');
+    clearTimeout(timeoutId);
+  });
+
 }
