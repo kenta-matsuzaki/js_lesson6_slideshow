@@ -47,26 +47,26 @@ nav li:hover {
   width: 140px;
 }
 
-.thumnails {
+.thumbnails {
   display: grid;
   grid-template-columns: repeat(5, 56px);
   gap: 5px;
 }
 
-.thumnails li {
+.thumbnails li {
   cursor: pointer;
   opacity: 0.4;
 }
 
-.thumnails li:hover {
+.thumbnails li:hover {
   opacity: 1;
 }
 
-.thumnails li.current {
+.thumbnails li.current {
   opacity: 1;
 }
 
-.thumnails img {
+.thumbnails img {
   width: 56px;
   vertical-align: bottom;
 }

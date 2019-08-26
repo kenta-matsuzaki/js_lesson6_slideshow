@@ -14,4 +14,16 @@
   let currentNum = 0;
 
   document.querySelector('main img').src = images[currentNum];
+
+  const thumbnails = document.querySelector('.thumbnails');
+  images.forEach((image, index) => {
+    const li = document.createElement('li');
+    if (index === currentNum){
+      li.classList.add('current');
+    }
+    const img = document.createElement('img');
+    img.src = image;
+    li.appendChild(img);
+    thumbnails.appendChild(li);
+  });
 }
