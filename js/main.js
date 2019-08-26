@@ -79,7 +79,11 @@
   }
 
   const play = document.getElementById('play');
+  const pause = document.getElementById('pause');
+
   play.addEventListener('click', () => {
+    play.classList.add('hidden');
+    pause.classList.remove('hidden');
     playSlideshow();
   });
 }
