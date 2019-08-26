@@ -19,6 +19,16 @@
 
   setMainImage(images[currentNum]);
 
+  function removeCurrentClass() {
+    document.querySelectorAll('.thumbnails li')[currentNum]
+      .classList.remove('current');
+  }
+
+  function addCurrentClass() {
+    document.querySelectorAll('.thumbnails li')[currentNum]
+      .classList.add('current');
+  }
+
   const thumbnails = document.querySelector('.thumbnails');
   images.forEach((image, index) => {
     const li = document.createElement('li');
@@ -28,6 +38,9 @@
 
     li.addEventListener('click', () => {
       setMainImage(image);
+      removeCurrentClass();
+      currentNum = index;
+      addCurrentClass();
     });
 
     const img = document.createElement('img');
