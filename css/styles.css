@@ -43,11 +43,30 @@ nav li:hover {
   background: #f8f8f8;
 }
 
+#play {
+  width: 140px;
+}
+
+.thumnails {
+  display: grid;
+  grid-template-columns: repeat(5, 56px);
+  gap: 5px;
+}
+
+.thumnails li {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.thumnails li:hover {
+  opacity: 1;
+}
+
+.thumnails li.current {
+  opacity: 1;
+}
+
 .thumnails img {
   width: 56px;
   vertical-align: bottom;
-}
-
-#play {
-  width: 140px;
 }
