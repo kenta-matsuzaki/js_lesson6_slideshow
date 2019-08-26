@@ -48,4 +48,16 @@
     li.appendChild(img);
     thumbnails.appendChild(li);
   });
+
+  const next = document.getElementById('next');
+  next.addEventListener('click', () => {
+    removeCurrentClass();
+    currentNum++;
+    if (currentNum === images.length) {
+      currentNum = 0;
+    }
+    addCurrentClass();
+    setMainImage(images[currentNum]);
+  });
+
 }
